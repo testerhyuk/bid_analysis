@@ -3,15 +3,6 @@ import tensorflow as tf
 
 
 def train_test_divide(data_x, data_x_hat, data_t, data_t_hat, train_rate=0.8):
-    """Divide train and test data for both original and synthetic data.
-
-    Args:
-      - data_x: original data
-      - data_x_hat: generated data
-      - data_t: original time
-      - data_t_hat: generated time
-      - train_rate: ratio of training data from the original data
-    """
     # Divide train/test index (original data)
     no = len(data_x)
     idx = np.random.permutation(no)
@@ -38,15 +29,6 @@ def train_test_divide(data_x, data_x_hat, data_t, data_t_hat, train_rate=0.8):
 
 
 def extract_time(data):
-    """Returns Maximum sequence length and each sequence length.
-
-    Args:
-      - data: original data
-
-    Returns:
-      - time: extracted time information
-      - max_seq_len: maximum sequence length
-    """
     time = list()
     max_seq_len = 0
     for i in range(len(data)):
@@ -57,14 +39,6 @@ def extract_time(data):
 
 
 def rnn_cell(module_name, hidden_dim):
-    """Basic RNN Cell.
-
-    Args:
-      - module_name: gru, lstm, or lstmLN
-
-    Returns:
-      - rnn_cell: RNN Cell
-    """
     assert module_name in ['gru', 'lstm', 'lstmLN']
 
     # GRU
@@ -80,17 +54,6 @@ def rnn_cell(module_name, hidden_dim):
 
 
 def random_generator(batch_size, z_dim, T_mb, max_seq_len):
-    """Random vector generation.
-
-    Args:
-      - batch_size: size of the random vector
-      - z_dim: dimension of random vector
-      - T_mb: time information for the random vector
-      - max_seq_len: maximum sequence length
-
-    Returns:
-      - Z_mb: generated random vector
-    """
     Z_mb = list()
     for i in range(batch_size):
         temp = np.zeros([max_seq_len, z_dim])
@@ -101,17 +64,6 @@ def random_generator(batch_size, z_dim, T_mb, max_seq_len):
 
 
 def batch_generator(data, time, batch_size):
-    """Mini-batch generator.
-
-    Args:
-      - data: time-series data
-      - time: time information
-      - batch_size: the number of samples in each batch
-
-    Returns:
-      - X_mb: time-series data in each batch
-      - T_mb: time information in each batch
-    """
     no = len(data)
     idx = np.random.permutation(no)
     train_idx = idx[:batch_size]
