@@ -17,4 +17,5 @@
 가장 근사한 투찰금액을 예측할 수 있는 시스템을 만들어 본다.
 
 대한건축학회에서 발표한 논문 초안 주소 : https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10563793
+
 논문 쓸 때 참고한 논문 주소 : https://www.koreascience.or.kr/article/JAKO202012764216667.pdf
