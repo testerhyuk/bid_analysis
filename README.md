@@ -16,4 +16,5 @@
 이에 본 연구는 머신러닝 및 딥러닝 기술을 활용하여 공개경쟁입찰 방식의 무작위성을 분석하여 패턴을 파악하고, 낙찰금액(예정가격)과 
 가장 근사한 투찰금액을 예측할 수 있는 시스템을 만들어 본다.
 
-해당 논문 주소 : https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10563793
+대한건축학회에서 발표한 논문 초안 주소 : https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE10563793
+논문 쓸 때 참고한 논문 주소 : https://www.koreascience.or.kr/article/JAKO202012764216667.pdf
